@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+			
+	<script type="text/javascript" src="obja.js"></script>
+	<script type="text/javascript" src="objb.js"></script>
+	<script type="text/javascript" src="objc.js"></script>
+	<script type="text/javascript" src="evtobj.js"></script>
+	<!-- obja=1; objb=10; objc=100 -->
+	<body>
+		<div id="number">0</div>
+
+		<script>
+
+			//create objects in root
+			const eveListenerA = document.createElement("ListenerA");
+			const eveListenerB = document.createElement("ListenerB");
+			const eveListenerC = document.createElement("ListenerC");
+
+			//create custom event object
+			var _e = new customeve();
+
+			//assign eventobject and listenerobject to each object;
+			var a = new obja(_e,eveListenerA);
+			var b = new objb(_e,eveListenerB);
+			var c = new objc(_e,eveListenerC);
+
+				//dispatch events
+				b.says();
+				c.says()
+		</script>
+
+	</body>
+</html>
